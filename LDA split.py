@@ -45,7 +45,7 @@ else:
     reducer = PCA(n_components=N_PCS).fit(Atr)                                # TRAIN only
     print("\nExplained variance per PC:", reducer.explained_variance_ratio_.round(3))
 
-cols = [f"PC{i+1}" for i in range(N_PCS)]   # names kept as PC1.. so the other script works unchanged
+cols = [f"LD{i+1}" for i in range(N_PCS)]
 for name, Xs, ys in [(f"cbc_train_{METHOD}.csv", Xtr, ytr), (f"cbc_test_{METHOD}.csv", Xte, yte)]:
     out = pd.DataFrame(reducer.transform(sc.transform(Xs)), columns=cols)
     out["diagnosis"] = ys.values
