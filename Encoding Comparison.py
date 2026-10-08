@@ -79,7 +79,7 @@ def cv_eval(X, y, fm, scale, k=5):
 def main():
     tr = pd.read_csv(TRAIN_FILE)
     te = pd.read_csv(TEST_FILE)
-    pcs = [c for c in tr.columns if c.startswith("PC")]
+    pcs = [c for c in tr.columns if c != LABEL_COL]
     X, y = tr[pcs].values, tr[LABEL_COL].astype(str).values
     Xte, yte = te[pcs].values, te[LABEL_COL].astype(str).values
     n = X.shape[1]
