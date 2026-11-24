@@ -5,7 +5,7 @@ from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 
 INPUT_FILE = "diagnosed_cbc_data_clean.csv"
-OUTPUT_FILE = "cbc_reduced.csv"
+OUTPUT_FILE = "cbc_reduced_clean.csv"
 TARGET_ROWS = 50
 
 # --- Load: skip the header row, then address columns by position ---
