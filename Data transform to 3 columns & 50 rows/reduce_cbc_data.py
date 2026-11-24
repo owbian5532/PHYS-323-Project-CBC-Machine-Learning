@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 
-INPUT_FILE = "diagnosed_cbc_data_v4.csv"
+INPUT_FILE = "diagnosed_cbc_data_clean.csv"
 OUTPUT_FILE = "cbc_reduced.csv"
 TARGET_ROWS = 50
 
